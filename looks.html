@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esthévia — Katalog Rekomendasi</title>
+<meta name="description" content="Kurasi barang pilihan yang benar-benar aku pakai dan rekomendasikan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Poppins:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#top" class="logo">esth<span>é</span>via <span class="logo-emoji">🎀</span></a>
+      <nav class="main-nav">
+        <a href="#katalog">Katalog</a>
+        <a href="#tentang">Tentang</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="wrap hero-inner">
+      <p class="hero-eyebrow">✨ Katalog — diperbarui tiap minggu</p>
+      <h1 class="hero-title">Barang gemash<br>yang beneran aku pakai 💗</h1>
+      <p class="hero-sub">Ini katalog pribadi soal barang-barang yang aku saring sendiri — cek reviewnya, cek bahannya — dari fashion, skincare, sampai perabotan kecil yang bikin hidup lebih gampang.</p>
+      <a href="#katalog" class="hero-cta">Lihat katalog ↓</a>
+    </div>
+  </section>
+
+  <!-- ===== LOOK OF THE WEEK ===== -->
+  <section class="look" id="look">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Look Pilihan ✨</h2>
+        <p class="section-note">Outfit lengkap, tinggal klik item yang kamu suka</p>
+      </div>
+
+      <div class="look-carousel-wrap">
+        <button class="look-nav look-nav-prev" id="lookPrev" aria-label="Look sebelumnya" type="button">‹</button>
+
+        <!-- 1 blok <article class="look-card"> = 1 outfit. Copy blok ini kalau mau nambah look baru -->
+        <div class="look-grid" id="lookGrid">
+
+          <article class="look-card">
+            <a class="look-photo" href="https://link-affiliate-kamu.com/produk-atasan" target="_blank" rel="noopener sponsored">
+              <img src="https://placehold.co/560x700/FFC2D6/4A1E33?text=Foto+Outfit" alt="Look kondangan simple elegan">
+              <span class="look-photo-tag">Look of the week</span>
+            </a>
+            <div class="look-detail">
+              <h3 class="look-title">Simple &amp; Elegan buat Kondangan</h3>
+              <p class="look-desc">Outfit yang gampang ditiru — atasan polos, rok flowy, tinggal tambah aksesoris tipis.</p>
+              <ul class="look-items">
+                <li class="look-item">
+                  <a class="look-item-link" href="https://link-affiliate-kamu.com/produk-atasan" target="_blank" rel="noopener sponsored">
+                    <img class="look-item-thumb" src="https://placehold.co/120x120/FFE1EC/4A1E33?text=%F0%9F%91%9A" alt="Atasan">
+                    <span class="look-item-info">
+                      <span class="look-item-name">Atasan Polos</span>
+                      <span class="look-item-sub">Ivory / Beige / Dusty Pink</span>
+                    </span>
+                    <span class="look-item-cta">Belanja →</span>
+                  </a>
+                </li>
+                <li class="look-item">
+                  <a class="look-item-link" href="https://link-affiliate-kamu.com/produk-rok" target="_blank" rel="noopener sponsored">
+                    <img class="look-item-thumb" src="https://placehold.co/120x120/FFE1EC/4A1E33?text=%F0%9F%91%97" alt="Rok">
+                    <span class="look-item-info">
+                      <span class="look-item-name">Rok Panjang A-line</span>
+                      <span class="look-item-sub">Coklat / Charcoal / Hitam</span>
+                    </span>
+                    <span class="look-item-cta">Belanja →</span>
+                  </a>
+                </li>
+                <li class="look-item">
+                  <a class="look-item-link" href="https://link-affiliate-kamu.com/produk-tas" target="_blank" rel="noopener sponsored">
+                    <img class="look-item-thumb" src="https://placehold.co/120x120/FFE1EC/4A1E33?text=%F0%9F%91%9C" alt="Tas">
+                    <span class="look-item-info">
+                      <span class="look-item-name">Tas Handbag Kulit</span>
+                      <span class="look-item-sub">Coklat Tan</span>
+                    </span>
+                    <span class="look-item-cta">Belanja →</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="look-card">
+            <a class="look-photo" href="https://link-affiliate-kamu.com/produk-kaos" target="_blank" rel="noopener sponsored">
+              <img src="https://placehold.co/560x700/FFC2D6/4A1E33?text=Foto+Outfit" alt="Look casual weekend">
+              <span class="look-photo-tag">Casual weekend</span>
+            </a>
+            <div class="look-detail">
+              <h3 class="look-title">Santai tapi Tetep Cute</h3>
+              <p class="look-desc">Buat jalan santai atau nongkrong — nyaman dipakai seharian, tetap kelihatan effortless.</p>
+              <ul class="look-items">
+                <li class="look-item">
+                  <a class="look-item-link" href="https://link-affiliate-kamu.com/produk-kaos" target="_blank" rel="noopener sponsored">
+                    <img class="look-item-thumb" src="https://placehold.co/120x120/FFE1EC/4A1E33?text=%F0%9F%91%95" alt="Kaos">
+                    <span class="look-item-info">
+                      <span class="look-item-name">Kaos Oversized</span>
+                      <span class="look-item-sub">White / Sage / Mocha</span>
+                    </span>
+                    <span class="look-item-cta">Belanja →</span>
+                  </a>
+                </li>
+                <li class="look-item">
+                  <a class="look-item-link" href="https://link-affiliate-kamu.com/produk-celana-look" target="_blank" rel="noopener sponsored">
+                    <img class="look-item-thumb" src="https://placehold.co/120x120/FFE1EC/4A1E33?text=%F0%9F%91%96" alt="Celana">
+                    <span class="look-item-info">
+                      <span class="look-item-name">Celana Wide Leg</span>
+                      <span class="look-item-sub">Denim / Khaki</span>
+                    </span>
+                    <span class="look-item-cta">Belanja →</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="look-card">
+            <a class="look-photo" href="https://link-affiliate-kamu.com/produk-blazer" target="_blank" rel="noopener sponsored">
+              <img src="https://placehold.co/560x700/FFC2D6/4A1E33?text=Foto+Outfit" alt="Look formal meeting">
+              <span class="look-photo-tag">Office look</span>
+            </a>
+            <div class="look-detail">
+              <h3 class="look-title">Formal tapi Gak Kaku</h3>
+              <p class="look-desc">Cocok buat meeting atau presentasi — tetap rapi tapi tetap nyaman dipakai seharian.</p>
+              <ul class="look-items">
+                <li class="look-item">
+                  <a class="look-item-link" href="https://link-affiliate-kamu.com/produk-blazer" target="_blank" rel="noopener sponsored">
+                    <img class="look-item-thumb" src="https://placehold.co/120x120/FFE1EC/4A1E33?text=%F0%9F%A7%A5" alt="Blazer">
+                    <span class="look-item-info">
+                      <span class="look-item-name">Blazer Oversized</span>
+                      <span class="look-item-sub">Black / Navy / Beige</span>
+                    </span>
+                    <span class="look-item-cta">Belanja →</span>
+                  </a>
+                </li>
+                <li class="look-item">
+                  <a class="look-item-link" href="https://link-affiliate-kamu.com/produk-kemeja" target="_blank" rel="noopener sponsored">
+                    <img class="look-item-thumb" src="https://placehold.co/120x120/FFE1EC/4A1E33?text=%F0%9F%91%94" alt="Kemeja">
+                    <span class="look-item-info">
+                      <span class="look-item-name">Kemeja Basic</span>
+                      <span class="look-item-sub">White / Sky Blue</span>
+                    </span>
+                    <span class="look-item-cta">Belanja →</span>
+                  </a>
+                </li>
+                <li class="look-item">
+                  <a class="look-item-link" href="https://link-affiliate-kamu.com/produk-celana-formal" target="_blank" rel="noopener sponsored">
+                    <img class="look-item-thumb" src="https://placehold.co/120x120/FFE1EC/4A1E33?text=%F0%9F%91%96" alt="Celana formal">
+                    <span class="look-item-info">
+                      <span class="look-item-name">Celana Kain Straight</span>
+                      <span class="look-item-sub">Black / Grey</span>
+                    </span>
+                    <span class="look-item-cta">Belanja →</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+
+        <button class="look-nav look-nav-next" id="lookNext" aria-label="Look berikutnya" type="button">›</button>
+      </div>
+
+      <div class="look-dots" id="lookDots"></div>
+
+      <div class="look-more-wrap">
+        <a class="look-load-more" href="looks.html">Lihat Look Lainnya ✨</a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="katalog" id="katalog">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Katalog 🛍️</h2>
+        <p class="section-note">Klik filter untuk menyaring</p>
+      </div>
+
+      <div class="filter-group">
+        <p class="filter-label">Kategori</p>
+        <div class="filter-bar" role="tablist" aria-label="Saring kategori">
+          <button class="filter-pill is-active" data-filter-type="category" data-filter="all">Semua</button>
+          <button class="filter-pill" data-filter-type="category" data-filter="fashion">Fashion</button>
+          <button class="filter-pill" data-filter-type="category" data-filter="skincare">Skincare</button>
+          <button class="filter-pill" data-filter-type="category" data-filter="gadget">Gadget</button>
+          <button class="filter-pill" data-filter-type="category" data-filter="home">Home &amp; Living</button>
+        </div>
+      </div>
+
+      <!-- Sub-filter Fashion — otomatis muncul cuma pas kategori "Fashion" dipilih -->
+      <div class="filter-group sub-filter-group" id="fashionSubfilter" hidden>
+        <p class="filter-label">Jenis Fashion</p>
+        <div class="filter-bar" role="tablist" aria-label="Saring jenis fashion">
+          <button class="filter-pill sub-pill is-active" data-filter-type="subcategory" data-filter="all">Semua</button>
+          <button class="filter-pill sub-pill" data-filter-type="subcategory" data-filter="atasan">Atasan</button>
+          <button class="filter-pill sub-pill" data-filter-type="subcategory" data-filter="rok">Rok</button>
+          <button class="filter-pill sub-pill" data-filter-type="subcategory" data-filter="celana">Celana</button>
+          <button class="filter-pill sub-pill" data-filter-type="subcategory" data-filter="kondangan">Kondangan</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <p class="filter-label">Untuk</p>
+        <div class="filter-bar" role="tablist" aria-label="Saring gender">
+          <button class="filter-pill is-active" data-filter-type="gender" data-filter="all">Semua</button>
+          <button class="filter-pill" data-filter-type="gender" data-filter="perempuan">Perempuan</button>
+          <button class="filter-pill" data-filter-type="gender" data-filter="laki-laki">Laki-laki</button>
+        </div>
+      </div>
+
+      <!-- ===== GRID PRODUK ===== -->
+      <div class="grid" id="productGrid">
+
+        <!-- ganti data-category, data-subcategory, data-gender, gambar, judul, catatan, harga, dan href sesuai produkmu -->
+        <!-- data-subcategory cuma dipakai kalau data-category="fashion": isi atasan / rok / celana / kondangan -->
+
+        <article class="card" data-category="fashion" data-subcategory="atasan" data-gender="perempuan">
+          <a class="card-media" href="https://link-affiliate-kamu.com/produk-atasan" target="_blank" rel="noopener sponsored">
+            <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk atasan" loading="lazy">
+            <span class="card-tag">Fashion · Atasan</span>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Nama Produk Atasan</h3>
+            <p class="card-note">"Bahannya adem, potongannya rapi buat daily wear."</p>
+            <div class="card-foot">
+              <span class="card-price">Rp220.000</span>
+              <a class="card-cta" href="https://link-affiliate-kamu.com/produk-atasan" target="_blank" rel="noopener sponsored">Belanja →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="fashion" data-subcategory="rok" data-gender="perempuan">
+          <a class="card-media" href="https://link-affiliate-kamu.com/produk-rok" target="_blank" rel="noopener sponsored">
+            <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk rok" loading="lazy">
+            <span class="card-tag">Fashion · Rok</span>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Nama Produk Rok</h3>
+            <p class="card-note">"Model A-line, gampang dipadu-padankan."</p>
+            <div class="card-foot">
+              <span class="card-price">Rp185.000</span>
+              <a class="card-cta" href="https://link-affiliate-kamu.com/produk-rok" target="_blank" rel="noopener sponsored">Belanja →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="fashion" data-subcategory="celana" data-gender="laki-laki">
+          <a class="card-media" href="https://link-affiliate-kamu.com/produk-celana" target="_blank" rel="noopener sponsored">
+            <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk celana" loading="lazy">
+            <span class="card-tag">Fashion · Celana</span>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Nama Produk Celana</h3>
+            <p class="card-note">"Item yang selalu aku pilih pas buru-buru."</p>
+            <div class="card-foot">
+              <span class="card-price">Rp165.000</span>
+              <a class="card-cta" href="https://link-affiliate-kamu.com/produk-celana" target="_blank" rel="noopener sponsored">Belanja →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="fashion" data-subcategory="kondangan" data-gender="perempuan">
+          <a class="card-media" href="https://link-affiliate-kamu.com/produk-kondangan" target="_blank" rel="noopener sponsored">
+            <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk kondangan" loading="lazy">
+            <span class="card-tag">Fashion · Kondangan</span>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Nama Produk Kondangan</h3>
+            <p class="card-note">"Elegan tapi gak ribet, cocok buat sekali dandan seharian."</p>
+            <div class="card-foot">
+              <span class="card-price">Rp275.000</span>
+              <a class="card-cta" href="https://link-affiliate-kamu.com/produk-kondangan" target="_blank" rel="noopener sponsored">Belanja →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="skincare" data-gender="perempuan">
+          <a class="card-media" href="https://link-affiliate-kamu.com/produk-1" target="_blank" rel="noopener sponsored">
+            <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk skincare" loading="lazy">
+            <span class="card-tag">Skincare</span>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Nama Produk Skincare</h3>
+            <p class="card-note">"Dipakai 3 bulan, kulitku beneran lebih kalem. Worth it."</p>
+            <div class="card-foot">
+              <span class="card-price">Rp150.000</span>
+              <a class="card-cta" href="https://link-affiliate-kamu.com/produk-1" target="_blank" rel="noopener sponsored">Belanja →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="skincare" data-gender="laki-laki">
+          <a class="card-media" href="https://link-affiliate-kamu.com/produk-5" target="_blank" rel="noopener sponsored">
+            <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk skincare pria" loading="lazy">
+            <span class="card-tag">Skincare</span>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Nama Produk Skincare Pria</h3>
+            <p class="card-note">"Teksturnya ringan, gampang diserap, gak lengket."</p>
+            <div class="card-foot">
+              <span class="card-price">Rp135.000</span>
+              <a class="card-cta" href="https://link-affiliate-kamu.com/produk-5" target="_blank" rel="noopener sponsored">Belanja →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="gadget" data-gender="perempuan">
+          <a class="card-media" href="https://link-affiliate-kamu.com/produk-3" target="_blank" rel="noopener sponsored">
+            <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk gadget" loading="lazy">
+            <span class="card-tag">Gadget</span>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Nama Produk Gadget</h3>
+            <p class="card-note">"Kecil tapi ngebantu banget buat kerja tiap hari."</p>
+            <div class="card-foot">
+              <span class="card-price">Rp99.000</span>
+              <a class="card-cta" href="https://link-affiliate-kamu.com/produk-3" target="_blank" rel="noopener sponsored">Belanja →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="home" data-gender="perempuan">
+          <a class="card-media" href="https://link-affiliate-kamu.com/produk-4" target="_blank" rel="noopener sponsored">
+            <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk home living" loading="lazy">
+            <span class="card-tag">Home</span>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Nama Produk Home</h3>
+            <p class="card-note">"Bikin sudut kamar terasa lebih tenang."</p>
+            <div class="card-foot">
+              <span class="card-price">Rp180.000</span>
+              <a class="card-cta" href="https://link-affiliate-kamu.com/produk-4" target="_blank" rel="noopener sponsored">Belanja →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="empty-state" id="emptyState" hidden>Belum ada produk yang cocok — coba ganti filternya ya 🎀</p>
+    </div>
+  </section>
+
+  <!-- ===== TENTANG ===== -->
+  <section class="about" id="tentang">
+    <div class="wrap about-grid">
+      <div class="envelope-card">
+        <p class="envelope-caption"><span class="envelope-icon">💌</span> Ada saran atau kritik?</p>
+        <form class="envelope-form" id="envelopeForm">
+          <label class="envelope-label" for="envelopeMessage">Pesan</label>
+          <textarea id="envelopeMessage" class="envelope-textarea" placeholder="Tulis saran atau kritiknya di sini..." maxlength="1000" required></textarea>
+
+          <button type="submit" class="envelope-submit" id="envelopeSubmit">Kirim</button>
+          <p class="envelope-hint" id="envelopeHint" hidden></p>
+        </form>
+      </div>
+
+      <div class="about-inner">
+        <h2>Catatan 💌</h2>
+        <p>Jujur aja, gak semua barang di sini aku coba sendiri satu-satu 😅 tapi semuanya udah aku saring sesuai selera aku — cek reviewnya bagus, bahannya juga oke, baru deh masuk katalog. Makasih banyak udah mampir &amp; support! 🤍</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a href="#top" class="logo footer-logo">esth<span>é</span>via</a>
+      <div class="footer-social">
+        <a href="https://tiktok.com/@esthevia" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://pinterest.com/esthevia" target="_blank" rel="noopener">Pinterest</a>
+      </div>
+      <p class="footer-copy">© 2026 Esthévia. Dibuat dengan 💗</p>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
