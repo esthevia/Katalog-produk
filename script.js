@@ -1,7 +1,3 @@
-// ============================================
-// ESTHÉVIA — filter kategori + sub-kategori fashion + gender
-// ============================================
-
 document.addEventListener('DOMContentLoaded', () => {
   const pills = document.querySelectorAll('.filter-pill');
   const cards = document.querySelectorAll('#productGrid .card');
@@ -112,16 +108,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== kartu amplop "Ada Saran atau Kritik?" — kirim pesan otomatis ke Telegram =====
+  // ===== kartu amplop "Ada Saran atau Kritik?" — kirim pesan lewat Cloudflare Worker =====
   //
-  // CARA SETUP (wajib diisi sebelum fitur ini bisa jalan):
-  // 1. Buka Telegram, cari @BotFather, kirim /newbot, ikuti instruksinya.
-  //    BotFather bakal kasih "Bot Token" (contoh: 123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ)
-  // 2. Cari @userinfobot di Telegram, kirim pesan apa aja, dia bakal balas "Chat ID" kamu (angka).
-  // 3. Kirim 1 pesan apa aja ke bot yang baru kamu bikin tadi (wajib, biar bot boleh membalas/mengirim ke kamu).
-  // 4. Ganti 2 nilai di bawah ini dengan Bot Token & Chat ID kamu.
-  const TELEGRAM_BOT_TOKEN = '8918033817:AAG3rkfb1mrwugLF5AfAyeCl6pUT8205Tv4';
-  const TELEGRAM_CHAT_ID = '1367121868';
+  // PENTING: Bot Token TIDAK ditaruh di sini lagi (biar gak ke-expose ke publik).
+  // Token disimpan aman di Cloudflare Worker. File ini cuma manggil URL worker itu.
+  //
+  // CARA SETUP:
+  // 1. Deploy file "telegram-worker.js" ke Cloudflare Worker (baca instruksi di file itu)
+  // 2. Copy URL worker kamu (contoh: https://esthevia-envelope.namakamu.workers.dev)
+  // 3. Ganti nilai WORKER_URL di bawah ini dengan URL worker kamu
+  const WORKER_URL = 'https://esthevia-envelope.oktassnt17.workers.dev';
 
   const envelopeForm = document.getElementById('envelopeForm');
 
@@ -140,29 +136,23 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      const isConfigured = !TELEGRAM_BOT_TOKEN.includes('GANTI_') && !TELEGRAM_CHAT_ID.includes('GANTI_');
+      const isConfigured = !WORKER_URL.includes('GANTI_');
 
       if (!isConfigured) {
-        hint.textContent = 'Fitur ini belum aktif — Bot Token & Chat ID Telegram belum dipasang di script.js.';
+        hint.textContent = 'Fitur ini belum aktif — URL Worker belum dipasang di script.js.';
         hint.hidden = false;
         return;
       }
-
-      const text = [
-        '💌 Pesan baru dari website Esthévia',
-        '',
-        message
-      ].join('\n');
 
       submitBtn.disabled = true;
       submitBtn.textContent = 'Mengirim...';
       hint.hidden = true;
 
       try {
-        const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        const res = await fetch(WORKER_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text })
+          body: JSON.stringify({ message })
         });
 
         if (!res.ok) throw new Error('Gagal mengirim');
