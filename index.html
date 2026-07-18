@@ -44,7 +44,6 @@
       <div class="look-carousel-wrap">
         <button class="look-nav look-nav-prev" id="lookPrev" aria-label="Look sebelumnya" type="button">‹</button>
 
-        <!-- 1 blok <article class="look-card"> = 1 outfit. Copy blok ini kalau mau nambah look baru -->
         <div class="look-grid" id="lookGrid">
 
           <article class="look-card">
@@ -199,7 +198,6 @@
         </div>
       </div>
 
-      <!-- Sub-filter Fashion — otomatis muncul cuma pas kategori "Fashion" dipilih -->
       <div class="filter-group sub-filter-group" id="fashionSubfilter" hidden>
         <p class="filter-label">Jenis Fashion</p>
         <div class="filter-bar" role="tablist" aria-label="Saring jenis fashion">
@@ -227,10 +225,23 @@
         <!-- data-subcategory cuma dipakai kalau data-category="fashion": isi atasan / rok / celana / kondangan -->
 
         <article class="card" data-category="fashion" data-subcategory="atasan" data-gender="perempuan">
-          <a class="card-media" href="https://link-affiliate-kamu.com/produk-atasan" target="_blank" rel="noopener sponsored">
-            <img src="Namala Blouse.jpg" alt="Namala Blouse" loading="lazy">
+          <div class="card-media">
+            <div class="card-media-gallery">
+              <a href="https://link-affiliate-kamu.com/produk-atasan" target="_blank" rel="noopener sponsored">
+                <img src="Namala Blouse.jpg" alt="Namala Blouse - Biru Denim" loading="lazy">
+              </a>
+              <a href="https://link-affiliate-kamu.com/produk-atasan" target="_blank" rel="noopener sponsored">
+                <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Warna+Krem" alt="Namala Blouse - Krem" loading="lazy">
+              </a>
+              <a href="https://link-affiliate-kamu.com/produk-atasan" target="_blank" rel="noopener sponsored">
+                <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Warna+Hitam" alt="Namala Blouse - Hitam" loading="lazy">
+              </a>
+              <!-- Mau tambah foto warna/varian lain? Copy 3 baris <a>...</a> di atas,
+                   taruh di bawah ini, ganti src foto (boleh link beda kalau warnanya
+                   punya link affiliate sendiri) -->
+            </div>
             <span class="card-tag">Fashion · Atasan</span>
-          </a>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Namala Blouse</h3>
             <p class="card-note">"Bahan denim yang nggak bikin gerah"</p>
@@ -242,10 +253,17 @@
         </article>
 
         <article class="card" data-category="fashion" data-subcategory="rok" data-gender="perempuan">
-          <a class="card-media" href="https://s.shopee.co.id/BSJDq18u2" target="_blank" rel="noopener sponsored">
-            <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk rok" loading="lazy">
+          <div class="card-media">
+            <div class="card-media-gallery">
+              <a href="https://s.shopee.co.id/BSJDq18u2" target="_blank" rel="noopener sponsored">
+                <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk rok" loading="lazy">
+              </a>
+              <!-- Mau tambah foto warna/varian lain? Copy 3 baris <a>...</a> di atas,
+                   taruh di bawah ini, ganti src foto (boleh link beda kalau warnanya
+                   punya link affiliate sendiri) -->
+            </div>
             <span class="card-tag">Fashion · Rok</span>
-          </a>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Nama Produk Rok</h3>
             <p class="card-note">"Model A-line, gampang dipadu-padankan."</p>
@@ -257,10 +275,17 @@
         </article>
 
         <article class="card" data-category="fashion" data-subcategory="celana" data-gender="laki-laki">
-          <a class="card-media" href="https://link-affiliate-kamu.com/produk-celana" target="_blank" rel="noopener sponsored">
-            <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk celana" loading="lazy">
+          <div class="card-media">
+            <div class="card-media-gallery">
+              <a href="https://link-affiliate-kamu.com/produk-celana" target="_blank" rel="noopener sponsored">
+                <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk celana" loading="lazy">
+              </a>
+              <!-- Mau tambah foto warna/varian lain? Copy 3 baris <a>...</a> di atas,
+                   taruh di bawah ini, ganti src foto (boleh link beda kalau warnanya
+                   punya link affiliate sendiri) -->
+            </div>
             <span class="card-tag">Fashion · Celana</span>
-          </a>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Nama Produk Celana</h3>
             <p class="card-note">"Item yang selalu aku pilih pas buru-buru."</p>
@@ -272,10 +297,17 @@
         </article>
 
         <article class="card" data-category="fashion" data-subcategory="kondangan" data-gender="perempuan">
-          <a class="card-media" href="https://link-affiliate-kamu.com/produk-kondangan" target="_blank" rel="noopener sponsored">
-            <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk kondangan" loading="lazy">
+          <div class="card-media">
+            <div class="card-media-gallery">
+              <a href="https://link-affiliate-kamu.com/produk-kondangan" target="_blank" rel="noopener sponsored">
+                <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk kondangan" loading="lazy">
+              </a>
+              <!-- Mau tambah foto warna/varian lain? Copy 3 baris <a>...</a> di atas,
+                   taruh di bawah ini, ganti src foto (boleh link beda kalau warnanya
+                   punya link affiliate sendiri) -->
+            </div>
             <span class="card-tag">Fashion · Kondangan</span>
-          </a>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Nama Produk Kondangan</h3>
             <p class="card-note">"Elegan tapi gak ribet, cocok buat sekali dandan seharian."</p>
@@ -287,10 +319,17 @@
         </article>
 
         <article class="card" data-category="skincare" data-gender="perempuan">
-          <a class="card-media" href="https://link-affiliate-kamu.com/produk-1" target="_blank" rel="noopener sponsored">
-            <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk skincare" loading="lazy">
+          <div class="card-media">
+            <div class="card-media-gallery">
+              <a href="https://link-affiliate-kamu.com/produk-1" target="_blank" rel="noopener sponsored">
+                <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk skincare" loading="lazy">
+              </a>
+              <!-- Mau tambah foto warna/varian lain? Copy 3 baris <a>...</a> di atas,
+                   taruh di bawah ini, ganti src foto (boleh link beda kalau warnanya
+                   punya link affiliate sendiri) -->
+            </div>
             <span class="card-tag">Skincare</span>
-          </a>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Nama Produk Skincare</h3>
             <p class="card-note">"Dipakai 3 bulan, kulitku beneran lebih kalem. Worth it."</p>
@@ -302,10 +341,17 @@
         </article>
 
         <article class="card" data-category="skincare" data-gender="laki-laki">
-          <a class="card-media" href="https://link-affiliate-kamu.com/produk-5" target="_blank" rel="noopener sponsored">
-            <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk skincare pria" loading="lazy">
+          <div class="card-media">
+            <div class="card-media-gallery">
+              <a href="https://link-affiliate-kamu.com/produk-5" target="_blank" rel="noopener sponsored">
+                <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk skincare pria" loading="lazy">
+              </a>
+              <!-- Mau tambah foto warna/varian lain? Copy 3 baris <a>...</a> di atas,
+                   taruh di bawah ini, ganti src foto (boleh link beda kalau warnanya
+                   punya link affiliate sendiri) -->
+            </div>
             <span class="card-tag">Skincare</span>
-          </a>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Nama Produk Skincare Pria</h3>
             <p class="card-note">"Teksturnya ringan, gampang diserap, gak lengket."</p>
@@ -317,10 +363,17 @@
         </article>
 
         <article class="card" data-category="gadget" data-gender="perempuan">
-          <a class="card-media" href="https://link-affiliate-kamu.com/produk-3" target="_blank" rel="noopener sponsored">
-            <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk gadget" loading="lazy">
+          <div class="card-media">
+            <div class="card-media-gallery">
+              <a href="https://link-affiliate-kamu.com/produk-3" target="_blank" rel="noopener sponsored">
+                <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk gadget" loading="lazy">
+              </a>
+              <!-- Mau tambah foto warna/varian lain? Copy 3 baris <a>...</a> di atas,
+                   taruh di bawah ini, ganti src foto (boleh link beda kalau warnanya
+                   punya link affiliate sendiri) -->
+            </div>
             <span class="card-tag">Gadget</span>
-          </a>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Nama Produk Gadget</h3>
             <p class="card-note">"Kecil tapi ngebantu banget buat kerja tiap hari."</p>
@@ -332,10 +385,17 @@
         </article>
 
         <article class="card" data-category="home" data-gender="perempuan">
-          <a class="card-media" href="https://link-affiliate-kamu.com/produk-4" target="_blank" rel="noopener sponsored">
-            <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk home living" loading="lazy">
+          <div class="card-media">
+            <div class="card-media-gallery">
+              <a href="https://link-affiliate-kamu.com/produk-4" target="_blank" rel="noopener sponsored">
+                <img src="https://placehold.co/600x750/FFC2D6/4A1E33?text=Foto+Produk" alt="Nama produk home living" loading="lazy">
+              </a>
+              <!-- Mau tambah foto warna/varian lain? Copy 3 baris <a>...</a> di atas,
+                   taruh di bawah ini, ganti src foto (boleh link beda kalau warnanya
+                   punya link affiliate sendiri) -->
+            </div>
             <span class="card-tag">Home</span>
-          </a>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Nama Produk Home</h3>
             <p class="card-note">"Bikin sudut kamar terasa lebih tenang."</p>
