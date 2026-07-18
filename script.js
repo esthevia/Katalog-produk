@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!gallery) return;
 
     const photos = gallery.querySelectorAll('a');
-    if (photos.length <= 1) return; // cuma 1 foto, gak perlu dots/carousel
+    if (photos.length <= 1) return; // cuma 1 foto, gak perlu dots/panah/carousel
 
     // bikin titik indikator sejumlah foto varian yang ada
     const dotsWrap = document.createElement('div');
@@ -128,6 +128,40 @@ document.addEventListener('DOMContentLoaded', () => {
     media.appendChild(dotsWrap);
 
     const dots = dotsWrap.querySelectorAll('.card-media-dot');
+
+    function goToPhoto(index) {
+      gallery.scrollTo({ left: gallery.clientWidth * index, behavior: 'smooth' });
+    }
+
+    // tombol panah kiri & kanan buat geser antar warna
+    const prevBtn = document.createElement('button');
+    prevBtn.type = 'button';
+    prevBtn.className = 'card-media-nav card-media-nav-prev';
+    prevBtn.setAttribute('aria-label', 'Warna sebelumnya');
+    prevBtn.textContent = '‹';
+
+    const nextBtn = document.createElement('button');
+    nextBtn.type = 'button';
+    nextBtn.className = 'card-media-nav card-media-nav-next';
+    nextBtn.setAttribute('aria-label', 'Warna berikutnya');
+    nextBtn.textContent = '›';
+
+    // klik panah gak boleh ikut buka link affiliate di belakangnya
+    [prevBtn, nextBtn].forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const current = Math.round(gallery.scrollLeft / gallery.clientWidth);
+        const isNext = btn.classList.contains('card-media-nav-next');
+        const nextIndex = isNext
+          ? Math.min(current + 1, photos.length - 1)
+          : Math.max(current - 1, 0);
+        goToPhoto(nextIndex);
+      });
+    });
+
+    media.appendChild(prevBtn);
+    media.appendChild(nextBtn);
 
     gallery.addEventListener('scroll', () => {
       window.requestAnimationFrame(() => {
