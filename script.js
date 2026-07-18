@@ -107,7 +107,46 @@ document.addEventListener('DOMContentLoaded', () => {
       lookGrid.scrollBy({ left: lookGrid.clientWidth, behavior: 'smooth' });
     });
   }
- const WORKER_URL = 'https://esthevia-envelope.oktassnt17.workers.dev';
+
+  // ===== galeri foto varian warna per produk (geser di dalam card) =====
+  document.querySelectorAll('.card-media').forEach(media => {
+    const gallery = media.querySelector('.card-media-gallery');
+    if (!gallery) return;
+
+    const photos = gallery.querySelectorAll('a');
+    if (photos.length <= 1) return; // cuma 1 foto, gak perlu dots/carousel
+
+    // bikin titik indikator sejumlah foto varian yang ada
+    const dotsWrap = document.createElement('div');
+    dotsWrap.className = 'card-media-dots';
+    photos.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.className = 'card-media-dot';
+      if (i === 0) dot.classList.add('is-active');
+      dotsWrap.appendChild(dot);
+    });
+    media.appendChild(dotsWrap);
+
+    const dots = dotsWrap.querySelectorAll('.card-media-dot');
+
+    gallery.addEventListener('scroll', () => {
+      window.requestAnimationFrame(() => {
+        const index = Math.round(gallery.scrollLeft / gallery.clientWidth);
+        dots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
+      });
+    });
+  });
+
+  // ===== kartu amplop "Ada Saran atau Kritik?" — kirim pesan lewat Cloudflare Worker =====
+  //
+  // PENTING: Bot Token TIDAK ditaruh di sini lagi (biar gak ke-expose ke publik).
+  // Token disimpan aman di Cloudflare Worker. File ini cuma manggil URL worker itu.
+  //
+  // CARA SETUP:
+  // 1. Deploy file "telegram-worker.js" ke Cloudflare Worker (baca instruksi di file itu)
+  // 2. Copy URL worker kamu (contoh: https://esthevia-envelope.namakamu.workers.dev)
+  // 3. Ganti nilai WORKER_URL di bawah ini dengan URL worker kamu
+  const WORKER_URL = 'https://esthevia-envelope.oktassnt17.workers.dev';
 
   const envelopeForm = document.getElementById('envelopeForm');
 
