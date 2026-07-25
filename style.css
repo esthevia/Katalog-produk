@@ -285,6 +285,13 @@ a:focus-visible, button:focus-visible {
   color: var(--ink-soft);
 }
 
+.look-item-price {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-top: 2px;
+}
+
 .look-item-cta {
   font-size: 0.8rem;
   font-weight: 600;
@@ -510,37 +517,30 @@ a:focus-visible, button:focus-visible {
   transform: scale(1.25);
 }
 
-/* tombol panah kiri/kanan buat geser antar foto warna — kecil, muncul pas hover di desktop */
+/* tombol panah kiri/kanan buat geser antar foto warna — selalu kelihatan */
 .card-media-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 26px;
-  height: 26px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   color: var(--gold);
   border: none;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 14px -4px rgba(0, 0, 0, 0.35);
   z-index: 3;
-  opacity: 0;
-  transition: opacity .2s var(--ease), background .2s var(--ease), color .2s var(--ease);
+  transition: background .2s var(--ease), color .2s var(--ease), transform .2s var(--ease);
 }
-.card-media:hover .card-media-nav { opacity: 1; }
-.card-media-nav:hover { background: var(--gold); color: #fff; }
-.card-media-nav-prev { left: 8px; }
-.card-media-nav-next { right: 8px; }
-
-/* di HP gak ada hover, jadi tombolnya selalu kelihatan tapi lebih transparan dikit */
-@media (hover: none) {
-  .card-media-nav { opacity: 0.85; }
-}
+.card-media-nav:hover { background: var(--gold); color: #fff; transform: translateY(-50%) scale(1.08); }
+.card-media-nav-prev { left: 10px; }
+.card-media-nav-next { right: 10px; }
 
 .card-tag {
   position: absolute;
