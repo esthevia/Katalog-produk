@@ -280,16 +280,29 @@ a:focus-visible, button:focus-visible {
   color: var(--ink);
 }
 
+/* baris ke-2: warna & harga digabung sejajar, dipisah titik, biar total cuma 2 baris */
+.look-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+
 .look-item-sub {
   font-size: 0.78rem;
   color: var(--ink-soft);
+}
+
+.look-item-dot {
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  opacity: 0.6;
 }
 
 .look-item-price {
   font-size: 0.82rem;
   font-weight: 700;
   color: var(--gold);
-  margin-top: 2px;
 }
 
 .look-item-cta {
