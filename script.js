@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const pills = document.querySelectorAll('.filter-pill');
   const cards = document.querySelectorAll('#productGrid .card');
   const emptyState = document.getElementById('emptyState');
-  const fashionSubfilter = document.getElementById('fashionSubfilter');
+  const fashionSubfilter = document.getElementById('FashionSubfilter');
 
   // state filter aktif: kategori, sub-kategori (khusus fashion), & gender
   const activeFilter = {
@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     cards.forEach(card => {
       const matchCategory = activeFilter.category === 'all' || card.dataset.category === activeFilter.category;
 
-      // sub-kategori cuma berlaku kalau lagi filter "fashion" dan kartunya memang fashion
-      const isFashionFilter = activeFilter.category === 'fashion';
+      // sub-kategori cuma berlaku kalau lagi filter "Fashion" dan kartunya memang fashion
+      const isFashionFilter = activeFilter.category === 'Fashion';
       const matchSubcategory = !isFashionFilter
         || activeFilter.subcategory === 'all'
         || card.dataset.subcategory === activeFilter.subcategory;
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // munculkan/sembunyikan sub-filter fashion sesuai kategori yang dipilih
       if (type === 'category') {
-        if (value === 'fashion') {
+        if (value === 'Fashion') {
           fashionSubfilter.hidden = false;
         } else {
           fashionSubfilter.hidden = true;
